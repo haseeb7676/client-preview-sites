@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabs Beauty Salon — Islamabad's Bridal Glow Studio</title>
+<meta name="description" content="Fabs Beauty Salon, E-11 Islamabad — bridal makeup, party makeup, hair & skin. 4.7★ from 3,400 reviews. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf6f1; --cream2:#f4ece3; --rose:#c98a6b; --rosegold:#d9a784;
+  --rose-deep:#a8664a; --espresso:#241a14; --ink:#3a2c24; --muted:#8a7568;
+  --gold:#c9a06a; --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.7;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+section{padding:72px 0}
+
+/* ---------- sparkles ---------- */
+.sparkle{position:absolute;pointer-events:none;color:var(--rosegold);animation:twinkle 3.4s ease-in-out infinite;opacity:.7}
+@keyframes twinkle{0%,100%{transform:scale(.6) rotate(0deg);opacity:.25}50%{transform:scale(1.15) rotate(20deg);opacity:.9}}
+
+/* ---------- top bar ---------- */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,246,241,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,138,107,.18)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+.brand{font-family:'Cormorant Garamond',serif;font-size:26px;letter-spacing:4px;color:var(--espresso);text-decoration:none}
+.brand small{display:block;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:6px;color:var(--rose-deep);margin-top:-4px}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--rose-deep),var(--rose));color:#fff;text-decoration:none;padding:13px 34px;border-radius:999px;font-size:14px;letter-spacing:2.5px;text-transform:uppercase;font-weight:500;box-shadow:0 10px 28px rgba(168,102,74,.35);transition:transform .25s,box-shadow .25s;border:none;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(168,102,74,.45)}
+.btn.ghost{background:transparent;color:var(--rose-deep);border:1px solid var(--rose);box-shadow:none}
+.top-cta{padding:9px 22px;font-size:11px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:130px 0 80px;background:
+  radial-gradient(1100px 520px at 85% -5%,rgba(217,167,132,.35),transparent 60%),
+  radial-gradient(900px 480px at 8% 110%,rgba(201,138,107,.22),transparent 60%),
+  linear-gradient(180deg,var(--cream) 0%,var(--cream2) 100%);overflow:hidden}
+.hero-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto}
+.eyebrow{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--rose-deep);margin-bottom:18px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(44px,9vw,88px);line-height:1.08;color:var(--espresso)}
+.hero h1 em{font-style:italic;color:var(--rose-deep)}
+.hero .urdu{margin-top:14px;font-size:17px;color:var(--muted);letter-spacing:.5px}
+.hero .meta{margin-top:10px;font-size:14px;letter-spacing:2px;color:var(--rose-deep);text-transform:uppercase}
+.hero .ctas{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .branches{margin-top:26px;font-size:13px;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
+/* floral ring */
+.floral{width:120px;height:120px;margin:0 auto 26px;position:relative}
+.floral svg{width:100%;height:100%;animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:4px;color:var(--muted);text-transform:uppercase;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* ---------- section heads ---------- */
+.kicker{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--rose-deep);text-align:center;margin-bottom:12px}
+h2.sec{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,6vw,52px);text-align:center;color:var(--espresso);line-height:1.15}
+.sec-sub{text-align:center;color:var(--muted);max-width:560px;margin:12px auto 0;font-size:16px}
+
+/* ---------- services ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:46px}
+.card{background:var(--white);border-radius:22px;padding:38px 28px;text-align:center;position:relative;overflow:hidden;border:1px solid rgba(201,138,107,.16);box-shadow:0 14px 40px rgba(36,26,20,.06);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(168,102,74,.16)}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,transparent,var(--rosegold),transparent)}
+.card .icon{width:64px;height:64px;margin:0 auto 18px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(217,167,132,.25),rgba(201,138,107,.12));font-size:28px}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--espresso);margin-bottom:8px}
+.card p{font-size:14px;color:var(--muted);margin-bottom:18px;min-height:44px}
+.card a{font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rose-deep);text-decoration:none;border-bottom:1px solid var(--rosegold);padding-bottom:3px}
+
+/* ---------- bridal note ---------- */
+.bridal{background:linear-gradient(135deg,#2b1e16,#1c130d);color:#f3e7da;border-radius:28px;padding:60px 34px;text-align:center;position:relative;overflow:hidden;margin:0 22px;max-width:1064px}
+.bridal::after{content:"";position:absolute;inset:0;background:radial-gradient(700px 320px at 50% -10%,rgba(217,167,132,.28),transparent 65%);pointer-events:none}
+.bridal h2{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,5.5vw,48px);color:#f7ead9;line-height:1.2;position:relative;z-index:1}
+.bridal h2 em{color:var(--rosegold);font-style:italic}
+.bridal p{position:relative;z-index:1;color:#cbb49e;max-width:560px;margin:16px auto 0;font-size:16px}
+.bridal .btn{position:relative;z-index:1;margin-top:30px}
+
+/* ---------- reviews ---------- */
+.reviews-band{background:var(--white);border-top:1px solid rgba(201,138,107,.16);border-bottom:1px solid rgba(201,138,107,.16)}
+.score{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:30px;flex-wrap:wrap}
+.score .num{font-family:'Cormorant Garamond',serif;font-size:74px;color:var(--espresso);line-height:1}
+.stars{color:var(--gold);font-size:26px;letter-spacing:4px}
+.score .lbl{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:40px}
+.quote{background:var(--cream);border-radius:18px;padding:26px;border:1px solid rgba(201,138,107,.14)}
+.quote .q-stars{color:var(--gold);letter-spacing:3px;font-size:14px;margin-bottom:10px}
+.quote p{font-size:15px;color:var(--ink);font-style:italic}
+.quote .who{margin-top:12px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.note{margin-top:26px;text-align:center;font-size:13px;color:var(--muted)}
+
+/* ---------- visit ---------- */
+.visit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:44px}
+.branch{background:var(--white);border-radius:20px;padding:34px 28px;border:1px solid rgba(201,138,107,.16);text-align:center;box-shadow:0 12px 34px rgba(36,26,20,.05)}
+.branch .tag{display:inline-block;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--rose-deep);border:1px solid var(--rosegold);border-radius:999px;padding:6px 18px;margin-bottom:14px}
+.branch h3{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--espresso);margin-bottom:6px}
+.branch p{font-size:15px;color:var(--muted)}
+
+/* ---------- footer / contact ---------- */
+footer{background:#1c130d;color:#cbb49e;padding:64px 0 30px;text-align:center}
+footer .fbrand{font-family:'Cormorant Garamond',serif;font-size:34px;letter-spacing:5px;color:#f3e7da}
+footer .fbrand small{display:block;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:6px;color:var(--rosegold);margin-top:2px}
+footer .fcta{margin:28px 0}
+footer .fline{font-size:14px;margin-top:8px}
+footer a{color:var(--rosegold);text-decoration:none}
+.fine{margin-top:36px;padding-top:20px;border-top:1px solid rgba(217,167,132,.15);font-size:12px;color:#8a7568;letter-spacing:1px}
+
+/* ---------- floating whatsapp ---------- */
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:transform .25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:560px){section{padding:56px 0}.hero{padding-top:110px}.btn{padding:13px 28px}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">FABS<small>BEAUTY SALON</small></a>
+    <a class="btn top-cta" href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20appointment%20book%20karni%20hai." target="_blank" rel="noopener">Book Now</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <span class="sparkle" style="top:16%;left:12%;font-size:22px;animation-delay:.2s">✦</span>
+  <span class="sparkle" style="top:28%;right:14%;font-size:16px;animation-delay:1.1s">✦</span>
+  <span class="sparkle" style="top:62%;left:8%;font-size:14px;animation-delay:2s">✧</span>
+  <span class="sparkle" style="top:70%;right:10%;font-size:20px;animation-delay:.6s">✦</span>
+  <span class="sparkle" style="top:44%;left:20%;font-size:12px;animation-delay:2.6s">✧</span>
+
+  <div class="wrap hero-inner">
+    <div class="floral" aria-hidden="true">
+      <svg viewBox="0 0 120 120" fill="none">
+        <circle cx="60" cy="60" r="56" stroke="#c98a6b" stroke-width="1" stroke-dasharray="4 6"/>
+        <circle cx="60" cy="60" r="46" stroke="#d9a784" stroke-width="1"/>
+        <g fill="#c98a6b" opacity=".8">
+          <ellipse cx="60" cy="22" rx="7" ry="12"/><ellipse cx="60" cy="98" rx="7" ry="12"/>
+          <ellipse cx="22" cy="60" rx="12" ry="7"/><ellipse cx="98" cy="60" rx="12" ry="7"/>
+          <ellipse cx="33" cy="33" rx="7" ry="11" transform="rotate(-45 33 33)"/>
+          <ellipse cx="87" cy="33" rx="7" ry="11" transform="rotate(45 87 33)"/>
+          <ellipse cx="33" cy="87" rx="7" ry="11" transform="rotate(45 33 87)"/>
+          <ellipse cx="87" cy="87" rx="7" ry="11" transform="rotate(-45 87 87)"/>
+        </g>
+        <circle cx="60" cy="60" r="10" fill="#d9a784" opacity=".5"/>
+      </svg>
+    </div>
+    <div class="eyebrow">E-11 · Islamabad</div>
+    <h1>Islamabad's <em>Bridal Glow</em> Studio</h1>
+    <p class="urdu">Apke khaas din ke liye — jahan har dulhan apni best glow paati hai.</p>
+    <p class="meta">★ 4.7 &nbsp;·&nbsp; 3,400 Google Reviews</p>
+    <div class="ctas">
+      <a class="btn" href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20appointment%20book%20karni%20hai." target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn ghost" href="#services">Explore Services</a>
+    </div>
+    <div class="branches">E-11 &nbsp;·&nbsp; I-8 &nbsp;·&nbsp; Islamabad</div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="kicker reveal">Our Services</div>
+    <h2 class="sec reveal">Crafted for <span class="serif" style="font-style:italic;color:var(--rose-deep)">every occasion</span></h2>
+    <p class="sec-sub reveal">Bridal se lekar everyday glow tak — har service expert hands me, premium products ke saath.</p>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="icon">👰</div>
+        <h3>Bridal</h3>
+        <p>Signature bridal makeup — shaadi wali perfect, camera-ready glow.</p>
+        <a href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20bridal%20package%20ki%20price%20list%20chahiye." target="_blank" rel="noopener">WhatsApp pe price list &amp; booking</a>
+      </div>
+      <div class="card reveal">
+        <div class="icon">💄</div>
+        <h3>Party Makeup</h3>
+        <p>Engagements, nikkah, dawats — soft glam ya full glam, apki choice.</p>
+        <a href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20party%20makeup%20ki%20price%20list%20chahiye." target="_blank" rel="noopener">WhatsApp pe price list &amp; booking</a>
+      </div>
+      <div class="card reveal">
+        <div class="icon">💇‍♀️</div>
+        <h3>Hair</h3>
+        <p>Cutting, styling, coloring &amp; treatments — healthy, shiny hair.</p>
+        <a href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20hair%20services%20ki%20price%20list%20chahiye." target="_blank" rel="noopener">WhatsApp pe price list &amp; booking</a>
+      </div>
+      <div class="card reveal">
+        <div class="icon">✨</div>
+        <h3>Skin</h3>
+        <p>Facials, clean-ups &amp; skin rituals — fresh, radiant skin.</p>
+        <a href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20skin%20services%20ki%20price%20list%20chahiye." target="_blank" rel="noopener">WhatsApp pe price list &amp; booking</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="bridal reveal" style="padding-left:22px;padding-right:22px">
+    <span class="sparkle" style="top:20%;left:10%;font-size:18px">✦</span>
+    <span class="sparkle" style="top:30%;right:12%;font-size:14px;animation-delay:1.4s">✧</span>
+    <span class="sparkle" style="bottom:24%;left:16%;font-size:13px;animation-delay:2.2s">✦</span>
+    <h2>Shaadi ka din <em>ek hi baar</em> aata hai</h2>
+    <p>Bridal season me dates jaldi fill ho jaati hain — apni shaadi ki date pehle se book karein taake apka glow guaranteed ho. Trial &amp; consultation ke liye WhatsApp pe rabta karein.</p>
+    <a class="btn" href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20bridal%20date%20book%20karni%20hai." target="_blank" rel="noopener">Reserve My Bridal Date</a>
+  </section>
+</div>
+
+<section class="reviews-band">
+  <div class="wrap">
+    <div class="kicker reveal">Loved by Islamabad</div>
+    <h2 class="sec reveal">3,400+ khush <span class="serif" style="font-style:italic;color:var(--rose-deep)">clients</span></h2>
+    <div class="score reveal">
+      <div class="num">4.7</div>
+      <div>
+        <div class="stars">★★★★★</div>
+        <div class="lbl">Google Reviews · E-11 Branch</div>
+      </div>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal"><div class="q-stars">★★★★★</div><p>"Best bridal salon in Islamabad — my makeup stayed flawless from shaadi to valima."</p><div class="who">— Google Review</div></div>
+      <div class="quote reveal"><div class="q-stars">★★★★★</div><p>"Professional staff, hygienic setup, and the bridal glow was unreal."</p><div class="who">— Google Review</div></div>
+      <div class="quote reveal"><div class="q-stars">★★★★★</div><p>"Booked for my sister's nikkah — party makeup looked so elegant in photos."</p><div class="who">— Google Review</div></div>
+    </div>
+    <p class="note reveal">Featured among the top bridal salons of Islamabad.</p>
+  </div>
+</section>
+
+<section id="visit">
+  <div class="wrap">
+    <div class="kicker reveal">Visit Us</div>
+    <h2 class="sec reveal">Do <span class="serif" style="font-style:italic;color:var(--rose-deep)">branches</span>, ek hi glow</h2>
+    <div class="visit-grid">
+      <div class="branch reveal">
+        <span class="tag">Flagship</span>
+        <h3>E-11</h3>
+        <p>Nafees Mansion, PMCHS<br>E-11/2, Islamabad</p>
+      </div>
+      <div class="branch reveal">
+        <span class="tag">Branch</span>
+        <h3>I-8</h3>
+        <p>I-8 Markaz<br>Islamabad</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="fbrand">FABS<small>BEAUTY SALON</small></div>
+    <div class="fcta">
+      <a class="btn" href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20appointment%20book%20karni%20hai." target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+    <p class="fline">📞 <a href="tel:+923355593228">+92 335 5593228</a></p>
+    <p class="fline">E-11 · I-8 · Islamabad</p>
+    <p class="fine">Sample design by Haseeb — customize ho sakta hai.</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/923355593228?text=Assalam%20o%20Alaikum!%20Mujhe%20appointment%20book%20karni%20hai." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.4.7 4.6 1.9 6.5L4 29l7.7-1.8c1.8 1 3.9 1.6 6.1 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.6 1.1 1.2-4.4-.3-.4c-1.1-1.7-1.7-3.7-1.7-5.7C5.9 9.5 10.4 5 16 5s10.1 4.5 10.1 10-4.5 9.8-10.1 9.8zm5.5-7.3c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.3-.7.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6.1-.2 0-.4 0-.6-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.6h-.6c-.2 0-.6.2-.9.9-.3.7-1.1 2.7-1.1 6.6 0 3.9 2.8 7.6 3.2 8.1.4.5 5.5 8.4 13.3 11.8 1.9.8 3.3 1.3 4.5 1.6 1.9.6 3.6.5 4.9.3.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.2-.7-.4z"/></svg>
+</a>
+
+<script>
+(function(){
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jaan Broast And Biryani — Prince Road, Quetta</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --red:#b3122e; --deep:#7c0b20; --orange:#ff7a1a; --amber:#ffb347;
+    --cream:#fff8ee; --cream2:#ffefd9; --ink:#2b1410; --muted:#7a5c4d;
+  }
+  html{scroll-behavior:smooth}
+  body{font-family:"Arial Rounded MT Bold","Helvetica Rounded","Segoe UI",Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.5;overflow-x:hidden}
+  .wrap{max-width:520px;margin:0 auto}
+
+  /* ---------- top bar ---------- */
+  .topbar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:12px 18px;background:rgba(124,11,32,.96);backdrop-filter:blur(6px);color:#fff}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:17px;letter-spacing:.5px}
+  .brand .flame{font-size:22px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.3))}
+  .top-wa{background:#25d366;color:#fff;text-decoration:none;font-weight:800;font-size:13px;
+    padding:9px 14px;border-radius:999px;box-shadow:0 3px 10px rgba(0,0,0,.25)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;overflow:hidden;color:#fff;text-align:center;
+    background:radial-gradient(120% 90% at 50% 0%, #e0313f 0%, var(--red) 45%, var(--deep) 100%);
+    padding:52px 22px 60px}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.14;
+    background:repeating-linear-gradient(-45deg,transparent 0 26px,rgba(255,255,255,.7) 26px 30px)}
+  .badge{display:inline-block;background:var(--amber);color:var(--deep);font-weight:900;font-size:12.5px;
+    padding:8px 16px;border-radius:999px;letter-spacing:.4px;box-shadow:0 4px 0 rgba(0,0,0,.18);margin-bottom:18px}
+  .hero h1{font-size:clamp(38px,10.5vw,58px);font-weight:900;line-height:1.02;letter-spacing:1px;
+    text-shadow:0 4px 0 rgba(0,0,0,.22);margin-bottom:10px}
+  .hero h1 .amp{color:var(--amber)}
+  .tagline{font-size:17px;font-weight:700;color:#ffe9c9;margin-bottom:6px}
+  .tagline-ur{font-size:15px;color:#ffd9a8;font-weight:600;margin-bottom:24px}
+  .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative;z-index:2}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:900;
+    padding:15px 26px;border-radius:999px;font-size:16px;transition:transform .15s}
+  .btn:active{transform:scale(.96)}
+  .btn-wa{background:#25d366;color:#fff;box-shadow:0 6px 0 #128c46,0 10px 22px rgba(0,0,0,.3)}
+  .btn-call{background:var(--cream);color:var(--deep);box-shadow:0 6px 0 #d9c4a5,0 10px 22px rgba(0,0,0,.3)}
+  .float{position:absolute;font-size:44px;opacity:.9;animation:floaty 5s ease-in-out infinite;z-index:1;filter:drop-shadow(0 6px 6px rgba(0,0,0,.25))}
+  .f1{top:26px;left:6%}.f2{top:110px;right:7%;animation-delay:1.4s;font-size:38px}
+  .f3{bottom:24px;left:10%;animation-delay:2.6s;font-size:34px}.f4{bottom:70px;right:9%;animation-delay:3.4s}
+  @keyframes floaty{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(8deg)}}
+
+  /* ---------- stats ---------- */
+  .stats{display:flex;background:var(--deep);color:#fff;text-align:center}
+  .stat{flex:1;padding:16px 6px;border-right:1px solid rgba(255,255,255,.15)}
+  .stat:last-child{border-right:none}
+  .stat b{display:block;font-size:21px;color:var(--amber)}
+  .stat span{font-size:11.5px;opacity:.85;font-weight:600}
+
+  /* ---------- sections ---------- */
+  section{padding:44px 22px}
+  .kicker{display:inline-block;background:#ffe3c2;color:var(--deep);font-size:12px;font-weight:900;
+    letter-spacing:1.5px;padding:6px 14px;border-radius:999px;margin-bottom:12px;text-transform:uppercase}
+  h2{font-size:30px;font-weight:900;margin-bottom:6px;letter-spacing:.5px}
+  .sub{color:var(--muted);font-weight:600;margin-bottom:24px;font-size:15px}
+
+  /* ---------- menu cards ---------- */
+  .cards{display:grid;gap:16px}
+  .card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 24px rgba(124,11,32,.12);
+    border:2px solid #ffe0bd;opacity:0;transform:translateY(24px);transition:all .6s ease}
+  .card.show{opacity:1;transform:none}
+  .card-top{height:120px;display:flex;align-items:center;justify-content:center;font-size:64px;position:relative}
+  .card-top.broast{background:linear-gradient(135deg,#ff9a3c,#e0313f)}
+  .card-top.biryani{background:linear-gradient(135deg,#ffb347,#ff7a1a)}
+  .card-top.desi{background:linear-gradient(135deg,#c2175b,#7c0b20)}
+  .card-top::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 18px,rgba(255,255,255,.12) 18px 21px)}
+  .card-body{padding:18px 20px 20px}
+  .card-body h3{font-size:21px;font-weight:900;margin-bottom:4px}
+  .card-body p{font-size:14px;color:var(--muted);font-weight:600;margin-bottom:14px}
+  .price-note{display:inline-block;background:var(--cream2);border:1.5px dashed var(--orange);color:var(--deep);
+    font-size:12.5px;font-weight:800;padding:8px 14px;border-radius:12px}
+
+  /* ---------- reviews ---------- */
+  .reviews{background:var(--deep);color:#fff;text-align:center;border-radius:28px;margin:0 14px;padding:40px 24px;position:relative;overflow:hidden}
+  .reviews::before{content:"★★★★★";position:absolute;top:-24px;left:0;right:0;font-size:120px;opacity:.07;letter-spacing:10px}
+  .big-rating{font-size:56px;font-weight:900;color:var(--amber);line-height:1}
+  .stars{color:var(--amber);font-size:22px;letter-spacing:4px;margin:8px 0}
+  .reviews p{color:#ffd9a8;font-weight:600;font-size:15px;max-width:340px;margin:0 auto}
+  .reviews .ur{margin-top:10px;font-size:14px;color:#ffca8f}
+
+  /* ---------- family ---------- */
+  .family{display:flex;gap:16px;align-items:center;background:#fff;border:2px solid #ffe0bd;
+    border-radius:22px;padding:22px;box-shadow:0 8px 24px rgba(124,11,32,.08)}
+  .family .ico{font-size:46px;flex-shrink:0}
+  .family h3{font-size:19px;font-weight:900;margin-bottom:4px}
+  .family p{font-size:14px;color:var(--muted);font-weight:600}
+
+  /* ---------- visit ---------- */
+  .visit-card{background:linear-gradient(135deg,var(--red),var(--deep));color:#fff;border-radius:22px;
+    padding:28px 24px;text-align:center;box-shadow:0 12px 30px rgba(124,11,32,.3)}
+  .visit-card h3{font-size:22px;font-weight:900;margin-bottom:6px}
+  .visit-card p{color:#ffd9a8;font-weight:600;margin-bottom:18px}
+  .map-btn{display:inline-block;background:var(--amber);color:var(--deep);font-weight:900;text-decoration:none;
+    padding:13px 26px;border-radius:999px;box-shadow:0 5px 0 rgba(0,0,0,.2)}
+
+  /* ---------- footer contact ---------- */
+  footer{background:#1d0a08;color:#f5d9b8;text-align:center;padding:40px 22px 26px}
+  footer h2{color:#fff}
+  .foot-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:20px 0 26px}
+  .landline{font-size:15px;font-weight:700;color:#ffca8f}
+  .landline a{color:#fff;text-decoration:none;font-weight:900}
+  .sample{margin-top:26px;padding-top:18px;border-top:1px solid rgba(255,255,255,.15);
+    font-size:12px;color:#a97f63;font-weight:600}
+  @media(min-width:560px){.cards{grid-template-columns:1fr 1fr 1fr}.card-top{height:110px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topbar">
+    <div class="brand"><span class="flame">🔥</span> JAAN BROAST</div>
+    <a class="top-wa" href="https://wa.me/923111786550?text=Assalam%20o%20Alaikum!%20Mujhe%20order%20karna%20hai.">Order Now</a>
+  </div>
+
+  <header class="hero">
+    <span class="float f1">🍗</span><span class="float f2">🍚</span>
+    <span class="float f3">🔥</span><span class="float f4">🍖</span>
+    <span class="badge">⭐ #1 MOST-REVIEWED RESTAURANT IN QUETTA</span>
+    <h1>JAAN<br>BROAST <span class="amp">&amp;</span><br>BIRYANI</h1>
+    <p class="tagline">Crispy Broast. Legendary Biryani. Pure Quetta flavor.</p>
+    <p class="tagline-ur">Quetta ka sab se mashhoor broast — ab ek tap pe order karo!</p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/923111786550?text=Assalam%20o%20Alaikum!%20Mujhe%20order%20karna%20hai.">💬 Order on WhatsApp</a>
+      <a class="btn btn-call" href="tel:0812669900">📞 081-2669900</a>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b>4.2 ★</b><span>Google Rating</span></div>
+    <div class="stat"><b>4,900+</b><span>Google Reviews</span></div>
+    <div class="stat"><b>Prince Rd</b><span>Quetta</span></div>
+  </div>
+
+  <section>
+    <span class="kicker">Menu</span>
+    <h2>Popular Picks 🔥</h2>
+    <p class="sub">Jo Quetta baar baar khaane aata hai.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="card-top broast">🍗</div>
+        <div class="card-body">
+          <h3>Crispy Broast</h3>
+          <p>Golden, crunchy, juicy — the legendary Jaan broast everyone talks about.</p>
+          <span class="price-note">📲 Call / WhatsApp for price &amp; full menu</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top biryani">🍚</div>
+        <div class="card-body">
+          <h3>Chicken Biryani</h3>
+          <p>Masaledar, dum wali biryani — Quetta style, full flavor in every bite.</p>
+          <span class="price-note">📲 Call / WhatsApp for price &amp; full menu</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-top desi">🍖</div>
+        <div class="card-body">
+          <h3>Desi Dishes</h3>
+          <p>Classic desi khaane — ghar jaisa taste, family ke saath enjoy karo.</p>
+          <span class="price-note">📲 Call / WhatsApp for price &amp; full menu</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="reviews">
+    <span class="kicker" style="background:rgba(255,255,255,.15);color:#ffd9a8">Reviews</span>
+    <div class="big-rating">4.2</div>
+    <div class="stars">★★★★☆</div>
+    <p><b style="color:#fff">4,900+ Google reviews</b> — Quetta ka sab se zyada reviewed restaurant. Hazaron khush customers, roz ka rush!</p>
+    <p class="ur">Log aate hain, khaate hain, aur wapas aate hain. ❤️</p>
+  </div>
+
+  <section>
+    <div class="family">
+      <div class="ico">👨‍👩‍👧‍👦</div>
+      <div>
+        <h3>Family-Friendly Spot</h3>
+        <p>Poori family ke saath aao — comfortable seating, quick service, aur khaana jo sab ko pasand aaye.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="visit-card">
+      <h3>📍 Visit Us</h3>
+      <p><b style="color:#fff">Jaan Broast And Biryani</b><br>Prince Road, Quetta</p>
+      <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=Jaan+Broast+And+Biryani+Prince+Road+Quetta">Get Directions 🗺️</a>
+    </div>
+  </section>
+
+  <footer>
+    <span class="kicker" style="background:rgba(255,255,255,.12);color:#ffd9a8">Contact</span>
+    <h2>Bhook lagi? Order karo! 🍗</h2>
+    <div class="foot-ctas">
+      <a class="btn btn-wa" href="https://wa.me/923111786550?text=Assalam%20o%20Alaikum!%20Mujhe%20order%20karna%20hai.">💬 WhatsApp: 0311-1786550</a>
+    </div>
+    <p class="landline">Landline: <a href="tel:0812669900">081-2669900</a></p>
+    <p class="sample">Sample design by Haseeb — customize ho sakta hai</p>
+  </footer>
+
+</div>
+<script>
+  // scroll-reveal for menu cards
+  const cards = document.querySelectorAll('.card');
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+  }), {threshold: .15});
+  cards.forEach(c => io.observe(c));
+</script>
+</body>
+</html>
